@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .slide-effect {
+    @apply 
+    after:absolute 
+    after:top-0 
+    after:right-0 
+    after:content-[''] 
+    after:z-[-1] 
+    after:w-0 
+    after:h-full 
+    after:bg-black 
+    after:rounded 
+    transition-all 
+    after:duration-500 
+    hover:after:left-0 
+    hover:after:right-auto 
+    hover:text-white 
+    hover:after:w-full 
+    z-[1] 
+    relative;
+  }
+}
+
+
+
+@layer components {
+  .underline-effect {
+    @apply
+    after:absolute
+    after:bottom-0
+    after:left-0
+    after:content-['']
+    after:w-0 
+    after:h-[2px]
+    after:bg-black
+    transition-all 
+    after:duration-500
+    hover:after:w-full
+  }
+}
+
+ul.slick-dots {
+  width: auto;
+  li {
+    margin-right: 1rem;
+    button::before {
+      content: "";
+      width: 2.2rem;
+      height: 7px;
+      border-radius: 30px;
+      background: #34a853;
+    }
+  }
+}
+
+ul.thumb-dots li {
+  width: auto;
+}
+
+.custom-controller > div {
+  padding: 0;
+}
